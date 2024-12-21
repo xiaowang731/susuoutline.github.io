@@ -6,7 +6,7 @@
   "homepage": "https://github.com/xiaowang731/susuoutline.github.io.git",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build",
+    "predeploy": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
