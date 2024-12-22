@@ -1,1 +1,0 @@
-import{u as i,j as n}from"./index-DXF-Fa1F.js";const a=()=>{const t=i(),s=()=>{t("/home")};return n.jsxs("div",{children:[n.jsx("div",{children:"付某是傻逼"}),n.jsx("button",{onClick:s,children:"去main"})]})};export{a as default};
