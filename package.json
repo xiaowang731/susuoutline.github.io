@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/xiaowang731/susuoutline.github.io.git",
+  "homepage": "https://xiaowang731.github.io/susuoutline.github.io",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",

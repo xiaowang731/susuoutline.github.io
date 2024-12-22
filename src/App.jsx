@@ -29,7 +29,10 @@ const App = () => {
       {showLoading ? (
         <Loading></Loading>
       ) : (
-        <RouterProvider router={router}></RouterProvider>
+        <RouterProvider
+          basename="/susuoutline.github.io"
+          router={router}
+        ></RouterProvider>
       )}
     </div>
   );
