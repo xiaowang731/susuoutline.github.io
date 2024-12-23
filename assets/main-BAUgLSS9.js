@@ -1,0 +1,1 @@
+import{u as s,j as t}from"./index-BWpI0GTG.js";const o=()=>{const i=s(),n=()=>{i("/susuoutline.github.io/home")};return t.jsxs("div",{children:[t.jsx("div",{children:"付某是傻逼"}),t.jsx("button",{onClick:n,children:"去main"})]})};export{o as default};
