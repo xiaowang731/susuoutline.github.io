@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Main = () => {
   const navigate = useNavigate();
   const btn = () => {
-    navigate("/home");
+    navigate("/susuoutline.github.io/home");
   };
   return (
     <div>

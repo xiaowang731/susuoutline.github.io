@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/susuoutline.github.io/',
-  base: "/",
+  base: "/susuoutline.github.io/",
+  // base: "/",
   plugins: [react()],
   resolve: {
     alias: {
