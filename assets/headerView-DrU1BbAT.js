@@ -1,0 +1,1 @@
+import{j as e,L as s}from"./index-B0cnrg4b.js";const r=()=>e.jsxs("div",{className:"headerView",children:[e.jsxs(s,{className:"header-left",to:"/susuoutline.github.io/",children:[e.jsx("i",{children:"S"}),e.jsx("span",{children:"Susu Blog"})]}),e.jsx("div",{className:"header-right",children:e.jsx(s,{to:"/susuoutline.github.io/home",children:"我的资料库"})})]});export{r as h};

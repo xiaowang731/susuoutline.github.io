@@ -1,1 +1,0 @@
-import{u as e,j as n}from"./index-BWpI0GTG.js";const o=()=>{const s=e(),t=()=>{s("/susuoutline.github.io/main")};return n.jsxs("div",{className:"content",children:[n.jsx("h1",{children:"欢迎来到我的页面！"}),n.jsx("p",{children:"页面加载完成后显示的内容。"}),n.jsx("button",{onClick:t,children:"去main"})]})};export{o as default};
