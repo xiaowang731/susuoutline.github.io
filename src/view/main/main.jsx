@@ -1,14 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import "./main.scss";
+import HeaderView from "@/view/headerView/headerView";
 
 const Main = () => {
-  const navigate = useNavigate();
-  const btn = () => {
-    navigate("/susuoutline.github.io/home");
-  };
   return (
     <div>
-      <div>付某是傻逼</div>
-      <button onClick={btn}>去main</button>
+      <HeaderView></HeaderView>
+      <div className="main-box">项目简介</div>
+      <div className="main-box">项目简介</div>
+      <div className="main-box">项目简介</div>
+      <div className="main-box">项目简介</div>
+      <div className="main-box">项目简介</div>
     </div>
   );
 };

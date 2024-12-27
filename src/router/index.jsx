@@ -1,7 +1,7 @@
 // router/index.js
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
-
+import Loading from "@/components/loading";
 const Home = lazy(() => import("@/view/home/home"));
 const Main = lazy(() => import("@/view/main/main"));
 const NotFoundPage = lazy(() => import("@/components/NotFound/NotFound"));
@@ -12,12 +12,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "", // 根路径，用于重定向到 home
-        element: <Navigate to="home" />, // 重定向到 home
+        element: <Navigate to="main" />, // 重定向到 home
       },
       {
         path: "home",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading></Loading>}>
             <Home />
           </Suspense>
         ),
@@ -25,20 +25,20 @@ const router = createBrowserRouter([
       {
         path: "main",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading></Loading>}>
             <Main />
           </Suspense>
         ),
       },
-      {
-        path: "*",
-        element: (
-          <Suspense fallback={<div>Loading...</div>}>
-            <NotFoundPage />
-          </Suspense>
-        ),
-      },
     ],
+  },
+  {
+    path: "*",
+    element: (
+      <Suspense fallback={<Loading></Loading>}>
+        <NotFoundPage />
+      </Suspense>
+    ),
   },
 ]);
 

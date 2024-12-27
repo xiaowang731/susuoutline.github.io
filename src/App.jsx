@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "@/router/index";
 import Loading from "@/components/loading/index";
 import { useState, useEffect } from "react";
+import "./App.scss";
 
 const App = () => {
   const [showLoading, setShowLoading] = useState(true);
@@ -25,7 +26,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="main-body">
       {showLoading ? (
         <Loading />
       ) : (

@@ -1,0 +1,96 @@
+/* 全局重置样式 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 清除锚链接的默认下划线 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 清除图片的默认边框 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* 表单元素重置 */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 清除列表的默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 表格样式 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 防止按钮在点击时的高亮效果 */
+button:focus,
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 93.75%;
+    /* 小于 1200px 时，1rem = 15px */
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 87.5%;
+    /* 小于 992px 时，1rem = 14px */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 81.25%;
+    /* 小于 768px 时，1rem = 13px */
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 75%;
+    /* 小于 576px 时，1rem = 12px */
+  }
+}

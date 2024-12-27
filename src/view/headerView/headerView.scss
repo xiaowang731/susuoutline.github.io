@@ -1,0 +1,40 @@
+.headerView {
+  position: sticky;
+  display: flex;
+  top: 0;
+  height: 3.125rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7);
+  .header-left {
+    margin-left: 120px;
+    height: 3.125rem;
+    width: 12.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    i {
+      font-style: normal;
+      display: inline-block;
+      border-radius: 50%;
+      font-size: 23px;
+      line-height: 30px;
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      background-color: #7d4a07;
+      color: red;
+    }
+    span {
+      margin-left: 0.3125rem;
+      color: red;
+    }
+  }
+  .header-right {
+    margin-right: 3.75rem;
+    button {
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
