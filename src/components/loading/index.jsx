@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// Lottie有一个已经被弃用的警告
 import Lottie from "react-lottie";
 import animationData from "@/assets/loading.json"; // 引入你的动画 JSON 文件
 import "./index.css";

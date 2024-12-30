@@ -16,7 +16,7 @@ html {
 body {
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #f4f2ec;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,4 +93,20 @@ input:focus {
     font-size: 75%;
     /* 小于 576px 时，1rem = 12px */
   }
+}
+// 自定义滚动条样式混入
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px; /* 设置滚动条的宽度 */
+  transition: opacity 0.3s ease; /* 添加过渡效果 */
+}
+
+::-webkit-scrollbar-track {
+  background: none; /* 设置滚动条轨道的背景色 */
+  border-radius: 10px; /* 设置轨道的圆角 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* 设置滚动条的颜色 */
+  border-radius: 10px; /* 设置滚动条的圆角 */
 }

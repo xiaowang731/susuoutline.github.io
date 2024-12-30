@@ -1,35 +1,10 @@
-// 自定义滚动条样式混入
-@mixin custom-scrollbar {
-  /* 自定义滚动条样式 */
-  &::-webkit-scrollbar {
-    width: 5px; /* 设置滚动条的宽度 */
-    display: none;
-    transition: opacity 0.3s ease; /* 添加过渡效果 */
-  }
-
-  /* 当鼠标悬停时显示滚动条 */
-  &:hover::-webkit-scrollbar {
-    display: block;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: none; /* 设置滚动条轨道的背景色 */
-    border-radius: 10px; /* 设置轨道的圆角 */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888; /* 设置滚动条的颜色 */
-    border-radius: 10px; /* 设置滚动条的圆角 */
-  }
-}
-
 .contents {
   display: flex;
   flex-direction: column;
   height: 100vh; // 占满整个视口
   .view-header {
     flex: 0 0 3.125rem; // 高度固定50px
-    background-color: pink;
+    // background-color: pink;
   }
   .panel-contents {
     display: flex;
@@ -40,14 +15,14 @@
       min-width: 9.375rem; // 保证宽度不会小于100px
       padding: 15px;
       overflow-y: auto; // 如果内容溢出，则显示竖向滚动条
-      @include custom-scrollbar;
+      // @include custom-scrollbar;
     }
 
     .panel-show {
       flex: 1; // 占据剩余空间
       overflow-y: auto; // 如果内容溢出，则显示竖向滚动条
       background-color: skyblue;
-      @include custom-scrollbar;
+      // @include custom-scrollbar;
     }
   }
 }

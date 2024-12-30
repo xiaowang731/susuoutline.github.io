@@ -1,11 +1,14 @@
 .headerView {
-  position: sticky;
+  position: absolute;
   display: flex;
   top: 0;
   height: 3.125rem;
+  width: 100%;
+  max-width: 123.75rem;
+  z-index: 1000;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.7);
+  background: none;
   .header-left {
     margin-left: 120px;
     height: 3.125rem;
