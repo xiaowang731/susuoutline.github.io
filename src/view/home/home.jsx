@@ -1,24 +1,34 @@
-import "./home.scss";
-import { Outlet } from "react-router-dom";
-import NavMenu from "./menu/menu";
+import TypingEffect from "@/components/TypingEffect/TypingEffect";
 import HeaderView from "@/view/headerView/headerView";
+import "./home.scss";
+import lightPng from "@/assets/img/light.png";
 
-const Home = () => {
+const Main = () => {
+  const EffectList = [
+    "书山有路勤为径,学海无涯苦作舟!",
+    "知己不足而后进,望山远岐而前行!",
+    "慢下脚步,让心灵照亮前行的路!",
+  ];
   return (
-    <div className="contents">
-      <div className="view-header">
-        <HeaderView />
-      </div>
-      <div className="panel-contents">
-        <div className="panel-menu">
-          <NavMenu />
+    <>
+      <HeaderView />
+      <div className="main-banner">
+        {/* 打字机组件 */}
+        <div className="effect-box">
+          <div className="effect-title">Web星球</div>
+          <TypingEffect
+            words={EffectList}
+            typingSpeed={150}
+            deletingSpeed={100}
+            pauseTime={1000}
+          />
         </div>
-        <div className="panel-show">
-          <Outlet />
+        <div className="right-img">
+          <img src={lightPng} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Home;
+export default Main;

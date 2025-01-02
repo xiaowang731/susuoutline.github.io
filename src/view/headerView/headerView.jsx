@@ -8,10 +8,10 @@ const headerView = () => {
         <span>Susu Blog</span>
       </Link>
       <div className="header-right">
-        <Link to="/susuoutline.github.io/main">
+        <Link to="/susuoutline.github.io/home">
           <button>首页</button>
         </Link>
-        <Link to="/susuoutline.github.io/home">我的资料库</Link>
+        <Link to="/susuoutline.github.io/knowledgeBase">我的资料库</Link>
       </div>
     </div>
   );
