@@ -1,15 +1,21 @@
-import React from "react";
-import "./home.scss";
+import React, { useEffect, useState } from "react";
 import HeaderView from "@/view/headerView/headerView";
 import useInViewport from "@/utils/useInViewport";
+import styles from "./home.module.scss"; // 导入 CSS Modules 样式
+import Skills from "./Skills";
 
 function Home() {
   const { hasAnimated: hasAnimated1, elementRef: introRef } = useInViewport();
-  const { hasAnimated: hasAnimated2, elementRef: skillsRef } = useInViewport();
+
   return (
-    <div className="home">
+    <div className={styles.home}>
       <HeaderView />
-      <div className={`intro ${hasAnimated1 ? "active" : ""}`} ref={introRef}>
+      <div
+        ref={introRef}
+        className={`${styles.intro} ${
+          hasAnimated1 ? styles["intro-active"] : ""
+        }`}
+      >
         <h1>Welcome to My Blog</h1>
         <p>
           Hi, I'm John Doe, a passionate frontend developer. Here, I share
@@ -17,17 +23,8 @@ function Home() {
           practices, and more.
         </p>
       </div>
-      <div className={`skills ${hasAnimated2 ? "active" : ""}`} ref={skillsRef}>
-        <h2>My Skills</h2>
-        <ul>
-          <li>JavaScript (ES6+)</li>
-          <li>React.js</li>
-          <li>HTML5 & CSS3</li>
-          <li>Node.js</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </div>
-      <div className="latest-articles">
+      <Skills />
+      <div className={styles["latest-articles"]}>
         <h2>Latest Articles</h2>
         <ul>
           <li>
@@ -41,7 +38,7 @@ function Home() {
           </li>
         </ul>
       </div>
-      <div className="social">
+      <div className={styles.social}>
         <h2>Connect with Me</h2>
         <ul>
           <li>

@@ -1,0 +1,33 @@
+// 背景盒子
+.playground {
+  position: relative;
+  height: 150vh;
+  // background-color: red;
+  //   展示盒子
+  .skills_list {
+    position: sticky;
+    top: 6.25rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: skyblue;
+    // 展示内容
+    .skills_list_item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .skills_list_items {
+        opacity: 0;
+        display: flex;
+        margin: 0 1.25rem;
+        width: calc(15% - 10px); /* 每个项占用 50% 的宽度，减去间距 */
+        margin-bottom: 10px; /* 每个项之间的间距 */
+        height: 9.375rem;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
