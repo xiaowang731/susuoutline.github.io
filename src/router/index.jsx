@@ -4,6 +4,7 @@ import React, { Suspense, lazy } from "react";
 import Loading from "@/components/loading";
 import Home from "@/view/home/home";
 import NotFoundPage from "@/components/NotFound/NotFound";
+import BoxList from "@/view/Box/box";
 
 const KnowledgeBase = lazy(() => import("@/view/knowledgeBase/knowledgeBase"));
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+      },
+      {
+        path: "cs",
+        element: <BoxList />,
       },
       {
         path: "knowledgeBase",

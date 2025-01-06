@@ -1,25 +1,119 @@
-.main-banner {
-  display: flex;
-  width: 100%;
-  height: 43.75rem;
-  align-items: center;
-  justify-content: space-between;
-  .right-img {
-    position: relative;
-    height: 100%;
-    margin-right: 3.125rem;
-    img {
-      position: relative;
-      height: 100%;
-      width: auto;
+.home {
+  font-family: Arial, sans-serif;
+  background: none;
+  color: #333;
+
+  .intro {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      animation: slideInFromBottom 1s ease-out forwards;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #2a9d8f;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #666;
     }
   }
-  .effect-box {
-    margin-left: 10%;
-    font-weight: 700;
-    .effect-title {
-      font-size: 5.625rem;
-      margin-bottom: 1.25rem;
+
+  .skills {
+    opacity: 0;
+    margin-top: 40px;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      animation: slideInFromBottom 1s ease-out forwards;
     }
+  }
+  .latest-articles,
+  .social {
+    margin-top: 40px;
+
+    h2 {
+      color: #2a9d8f;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #2a9d8f;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      font-size: 1.2em;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #2a9d8f;
+      }
+    }
+  }
+}
+
+.home {
+  @media (max-width: 768px) {
+    .intro h1 {
+      font-size: 2em;
+    }
+
+    .skills ul,
+    .latest-articles ul,
+    .social ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+    }
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

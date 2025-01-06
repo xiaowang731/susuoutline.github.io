@@ -1,3 +1,5 @@
+//打字机效果
+
 import React, { useState, useEffect } from "react";
 import "./TypingEffect.scss";
 

@@ -1,34 +1,62 @@
-import TypingEffect from "@/components/TypingEffect/TypingEffect";
-import HeaderView from "@/view/headerView/headerView";
+import React from "react";
 import "./home.scss";
-import lightPng from "@/assets/img/light.png";
+import HeaderView from "@/view/headerView/headerView";
+import useInViewport from "@/utils/useInViewport";
 
-const Main = () => {
-  const EffectList = [
-    "书山有路勤为径,学海无涯苦作舟!",
-    "知己不足而后进,望山远岐而前行!",
-    "慢下脚步,让心灵照亮前行的路!",
-  ];
+function Home() {
+  const { hasAnimated: hasAnimated1, elementRef: introRef } = useInViewport();
+  const { hasAnimated: hasAnimated2, elementRef: skillsRef } = useInViewport();
   return (
-    <>
+    <div className="home">
       <HeaderView />
-      <div className="main-banner">
-        {/* 打字机组件 */}
-        <div className="effect-box">
-          <div className="effect-title">Web星球</div>
-          <TypingEffect
-            words={EffectList}
-            typingSpeed={150}
-            deletingSpeed={100}
-            pauseTime={1000}
-          />
-        </div>
-        <div className="right-img">
-          <img src={lightPng} />
-        </div>
+      <div className={`intro ${hasAnimated1 ? "active" : ""}`} ref={introRef}>
+        <h1>Welcome to My Blog</h1>
+        <p>
+          Hi, I'm John Doe, a passionate frontend developer. Here, I share
+          articles, tutorials, and insights about web development, coding
+          practices, and more.
+        </p>
       </div>
-    </>
+      <div className={`skills ${hasAnimated2 ? "active" : ""}`} ref={skillsRef}>
+        <h2>My Skills</h2>
+        <ul>
+          <li>JavaScript (ES6+)</li>
+          <li>React.js</li>
+          <li>HTML5 & CSS3</li>
+          <li>Node.js</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+      <div className="latest-articles">
+        <h2>Latest Articles</h2>
+        <ul>
+          <li>
+            <a href="/articles/react-hooks">Understanding React Hooks</a>
+          </li>
+          <li>
+            <a href="/articles/javascript-es6">JavaScript ES6 Features</a>
+          </li>
+          <li>
+            <a href="/articles/css-grid">CSS Grid Layout Tutorial</a>
+          </li>
+        </ul>
+      </div>
+      <div className="social">
+        <h2>Connect with Me</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/yourusername">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/yourusername">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
-};
+}
 
-export default Main;
+export default Home;
