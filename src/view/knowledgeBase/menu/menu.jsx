@@ -54,7 +54,7 @@ const NavMenu = () => {
             </div>
             {item.subtitle.map((el) => {
               return (
-                <div className="nav-header">
+                <div key={el.id} className="nav-header">
                   <i></i>
                   <span>{el.title}</span>
                 </div>

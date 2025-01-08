@@ -23,7 +23,6 @@
     "react-lottie": "^1.2.10",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^7.1.1",
-    "react-spring": "^9.7.5",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 // 背景盒子
 .playground {
   position: relative;
-  height: 150vh;
+  height: 250vh;
   // background-color: red;
   //   展示盒子
   .skills_list {
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     // background-color: skyblue;
+    overflow: hidden;
     // 展示内容
     .skills_list_item {
       display: flex;

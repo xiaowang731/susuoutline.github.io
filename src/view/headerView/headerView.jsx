@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./headerView.scss";
+import styles from "./headerView.module.scss";
 
 function HeaderView() {
   return (
-    <header className="header">
-      <div className="logo">
-        <Link to="/susuoutline.github.io/">My Blog</Link>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Link to="/susuoutline.github.io/">DevCraft</Link>
       </div>
-      <nav className="nav">
+      <nav className={styles.nav}>
         <ul>
           <li>
-            <Link to="/susuoutline.github.io/">Home</Link>
+            <Link to="/susuoutline.github.io/">主页</Link>
           </li>
           <li>
-            <Link to="/susuoutline.github.io/KnowledgeBase">
-              Knowledge Base
-            </Link>
+            <Link to="/susuoutline.github.io/KnowledgeBase">知识库</Link>
           </li>
         </ul>
       </nav>

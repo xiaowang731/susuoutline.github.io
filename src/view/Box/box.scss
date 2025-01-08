@@ -1,0 +1,48 @@
+// .arrow-guide {
+//   position: fixed;
+//   bottom: 30px; /* 调整箭头距离底部的距离 */
+//   left: 50%;
+//   transform: translateX(-50%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 10;
+//   .arrow {
+//     position: absolute;
+//     width: 30px;
+//     height: 30px;
+//     opacity: 0;
+//     background: url(/src/assets/bottom.svg) no-repeat center;
+//     animation: bounce 1.5s infinite ease-in-out;
+//   }
+
+//   .arrow1 {
+//     bottom: 8px;
+//     animation: bounce 1.5s infinite ease-in-out 0.3s;
+//   }
+
+//   .arrow2 {
+//     bottom: 4px;
+//     animation: bounce 1.5s infinite ease-in-out 0.6s;
+//   }
+
+//   .arrow3 {
+//     bottom: 0px;
+//     animation: bounce 1.5s infinite ease-in-out 0.8s;
+//   }
+// }
+
+// @keyframes bounce {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   60% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
