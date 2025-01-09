@@ -1,13 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import markdown from "vite-plugin-markdown";
 import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
   base: "/susuoutline.github.io/",
   // base: "/",
-  plugins: [react(), markdown()],
+  plugins: [react()],
   assetsInclude: ["**/*.md"],
   resolve: {
     alias: {

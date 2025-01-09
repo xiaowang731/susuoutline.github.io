@@ -5,7 +5,6 @@ import RightImg from "@/assets/you.svg";
 import HeaderView from "@/view/headerView/headerView";
 import HSJ from "./vue 原理总结.md";
 
-import ReactMarkdown from "react-markdown";
 const KnowledgeBase = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // 控制左侧导航的展开/折叠
 
@@ -29,9 +28,7 @@ const KnowledgeBase = () => {
             {isSidebarOpen ? <img src={LeftImg} /> : <img src={RightImg} />}
           </div>
           {/* 右侧内容区域 */}
-          <div className={styles.content}>
-            <ReactMarkdown>{HSJ}</ReactMarkdown>
-          </div>
+          <div className={styles.content}></div>
         </div>
       </div>
     </div>

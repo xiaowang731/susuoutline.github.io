@@ -1,3 +1,4 @@
+// 仿钉钉动画函数
 const createAnimation = (scrollStart, scrollEnd, startValue, endValue) => {
   return (x) => {
     if (x < scrollStart) {

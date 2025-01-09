@@ -7,28 +7,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 5555;
+  z-index: 55;
 
   .nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1.25rem;
     .list-nav {
       display: inline-block;
+      background-color: #f4f2ec;
+      padding: 0.875rem 2.5rem;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 0.125rem;
       cursor: pointer;
-      font-size: 1.125rem;
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      margin-left: 2.1875rem;
-      opacity: 0;
-      transition: 0.3s;
+      border-radius: 0.625rem;
+      border: 2px dashed #f4f2ec;
+      margin: 0 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       animation: slideTop 1s ease-in-out forwards;
       animation-delay: calc(0.2s * var(--i));
-      &:hover,
       &.active {
-        color: #b7b2a9;
+        background-color: #87dbd0;
       }
+      &:hover {
+        transition: 0.4s;
+        border: 2px solid #00bfa6;
+        background-color: #00bfa6;
+        color: #fff;
+      }
+    }
+    .more-svg {
+      margin-right: 1.25rem;
+      display: none;
     }
   }
 
@@ -41,6 +54,34 @@
     cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease-out forwards;
+  }
+}
+
+@media (max-width: 35.5rem) {
+  .header {
+    .nav {
+      .list-nav {
+        display: none;
+      }
+      .more-svg {
+        display: block;
+        animation: slideTop 1s ease-in-out forwards;
+        opacity: 0;
+      }
+    }
+  }
+  .list-nav {
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 0.875rem;
+    border-radius: 0.3125rem;
+    padding-left: 0.625rem;
+    &:hover {
+      background-color: #00bfa6;
+      color: #fff;
+    }
   }
 }
 
