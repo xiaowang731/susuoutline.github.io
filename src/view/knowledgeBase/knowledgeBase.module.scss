@@ -1,0 +1,68 @@
+$hover-color: #5ea9a9; // 定义 hover 颜色
+
+.home-container {
+  display: flex;
+  height: 100vh;
+  transition: all 0.1s ease;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  .bottom-content {
+    display: flex;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    // 左侧导航
+    .sidebar {
+      background-color: #f4f2ec;
+      flex: 0 0 15.625rem;
+      position: relative;
+      color: rgb(0, 0, 0);
+      border-right: 1px solid rgb(210, 192, 192);
+      transition: width 0.1s ease;
+      height: 100%;
+      overflow-y: auto; // Y 轴出现滚动条
+
+      &.sidebar-closed {
+        flex: 0;
+        border: 0;
+      }
+    }
+
+    // 右侧内容区域
+    .content-area {
+      flex: 1 1 auto;
+      background-color: #f4f2ec;
+      transition: margin-left 0.1s ease;
+      padding: 1.25rem 2rem;
+      min-width: 22.5rem;
+      overflow-y: auto;
+
+      // 切换按钮
+      .toggle-btn {
+        position: absolute;
+        width: 18px;
+        height: 40px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        display: flex;
+        margin-left: -2rem;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: rgb(239, 239, 255);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        // background: rgb(197, 224, 244);
+        &:hover {
+          background: rgb(223, 234, 216);
+        }
+      }
+      .content {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+      }
+    }
+  }
+}
