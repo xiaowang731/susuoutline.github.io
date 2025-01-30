@@ -1,13 +1,14 @@
 import React from "react";
 import "./Box.scss";
+import { Typography } from "antd";
+import ReactMarkdown from "react-markdown";
 
 const Box = () => {
+  const markdownContent = `# My Markdown Content This is a sample Markdown content.`;
   return (
-    <div className="arrow-guide">
-      <div className="arrow arrow1"></div>
-      <div className="arrow arrow2"></div>
-      <div className="arrow arrow3"></div>
-    </div>
+    <Typography>
+      <ReactMarkdown>{markdownContent}</ReactMarkdown>;
+    </Typography>
   );
 };
 

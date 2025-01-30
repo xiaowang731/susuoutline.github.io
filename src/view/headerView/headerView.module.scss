@@ -42,6 +42,7 @@
     .more-svg {
       margin-right: 1.25rem;
       display: none;
+      cursor: pointer;
     }
   }
 
@@ -78,6 +79,7 @@
     font-weight: 0.875rem;
     border-radius: 0.3125rem;
     padding-left: 0.625rem;
+    cursor: pointer;
     &:hover {
       background-color: #00bfa6;
       color: #fff;

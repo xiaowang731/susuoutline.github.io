@@ -6,7 +6,21 @@ import path from "path";
 export default defineConfig({
   base: "/susuoutline.github.io/",
   // base: "/",
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "markdown-loader",
+      transform(code, id) {
+        if (id.endsWith(".md")) {
+          // 直接返回 Markdown 内容，而不是文件路径
+          return {
+            code: `export default ${JSON.stringify(code)}`,
+            map: null,
+          };
+        }
+      },
+    },
+  ],
   assetsInclude: ["**/*.md"],
   resolve: {
     alias: {

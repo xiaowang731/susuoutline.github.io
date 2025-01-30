@@ -1,0 +1,110 @@
+.yuque-markdown-body {
+  color: #262626;
+  font-size: 15px;
+  line-height: 1.75;
+  padding: 24px;
+  
+  // 标题样式
+  .yuque-h1 {
+    font-size: 28px;
+    margin: 28px 0 18px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  .yuque-h2 {
+    font-size: 24px;
+    margin: 24px 0 16px;
+    font-weight: 500;
+  }
+  
+  .yuque-h3 {
+    font-size: 20px;
+    margin: 20px 0 14px;
+    font-weight: 500;
+  }
+
+  // 行内代码样式
+  .yuque-inline-code {
+    margin: 0 2px;
+    padding: 2px 6px;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+
+  // 链接样式
+  .yuque-link {
+    color: #1890ff;
+    text-decoration: none;
+    &:hover {
+      color: #40a9ff;
+      text-decoration: underline;
+    }
+  }
+
+  // 段落样式
+  p {
+    margin: 16px 0;
+    line-height: 1.75;
+  }
+
+  // 列表样式
+  ul, ol {
+    padding-left: 24px;
+    margin: 16px 0;
+    
+    li {
+      margin: 8px 0;
+      line-height: 1.75;
+    }
+  }
+
+  // 引用样式
+  blockquote {
+    margin: 16px 0;
+    padding: 0 16px;
+    color: #697b8c;
+    border-left: 4px solid #ebedf0;
+    
+    p {
+      margin: 8px 0;
+    }
+  }
+
+  // 表格样式
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    
+    th, td {
+      padding: 12px 8px;
+      border: 1px solid #ebedf0;
+    }
+    
+    th {
+      background-color: #fafafa;
+      font-weight: 500;
+    }
+    
+    tr:hover {
+      background-color: #fafafa;
+    }
+  }
+
+  // 分割线样式
+  hr {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #ebedf0;
+  }
+
+  // 图片样式
+  img {
+    max-width: 100%;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+} 
