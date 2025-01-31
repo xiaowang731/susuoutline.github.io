@@ -1,24 +1,105 @@
 import { useRef, useEffect } from "react";
 import styles from "./skills.module.scss";
 import { updataMap, updataStyles } from "@/utils/utils";
+import {
+  FaReact,
+  FaVuejs,
+  FaHtml5,
+  FaCss3Alt,
+  FaSass,
+  FaNpm,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiWebpack,
+  SiVite,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiRedux,
+} from "react-icons/si";
 const list = [
-  { id: "001", content: "JavaScript (ES6+)", color: "#981b7d" },
-  { id: "002", content: "React.js", color: "#6dba14" },
-  { id: "003", content: "HTML5 & CSS3", color: "#313e22" },
-  { id: "004", content: "Node.js", color: "#c44924" },
-  { id: "005", content: "JGit & GitHub", color: "#1212ce" },
-  { id: "006", content: "JavaScript (ES6+)", color: "#981b7d" },
-  { id: "007", content: "React.js", color: "#6dba14" },
-  { id: "008", content: "HTML5 & CSS3", color: "#313e22" },
-  { id: "009", content: "Node.js", color: "#c44924" },
-  { id: "010", content: "JGit & GitHub", color: "#1212ce" },
+  {
+    id: "001",
+    content: "JavaScript",
+    icon: <SiJavascript />,
+    color: "#F7DF1E",
+  },
+  {
+    id: "002",
+    content: "React",
+    icon: <FaReact />,
+    color: "#61DAFB",
+  },
+  {
+    id: "003",
+    content: "Vue",
+    icon: <FaVuejs />,
+    color: "#4FC08D",
+  },
+  {
+    id: "004",
+    content: "TypeScript",
+    icon: <SiTypescript />,
+    color: "#3178C6",
+  },
+  {
+    id: "005",
+    content: "HTML5",
+    icon: <FaHtml5 />,
+    color: "#E34F26",
+  },
+  {
+    id: "006",
+    content: "CSS3",
+    icon: <FaCss3Alt />,
+    color: "#1572B6",
+  },
+  {
+    id: "007",
+    content: "Next.js",
+    icon: <SiNextdotjs />,
+    color: "#000000",
+  },
+  {
+    id: "008",
+    content: "Sass",
+    icon: <FaSass />,
+    color: "#CC6699",
+  },
+  {
+    id: "009",
+    content: "TailwindCSS",
+    icon: <SiTailwindcss />,
+    color: "#06B6D4",
+  },
+  {
+    id: "010",
+    content: "Redux",
+    icon: <SiRedux />,
+    color: "#764ABC",
+  },
+  {
+    id: "011",
+    content: "Webpack",
+    icon: <SiWebpack />,
+    color: "#8DD6F9",
+  },
+  {
+    id: "012",
+    content: "Vite",
+    icon: <SiVite />,
+    color: "#646CFF",
+  },
 ];
+
 const Skills = () => {
   // 获取元素
   const elementRefs = useRef([]);
   const playGroundReact = useRef();
   const showListBox = useRef();
   const titleRef = useRef();
+
   // 在渲染时为每个元素绑定 ref
   useEffect(() => {
     elementRefs.current.unshift(titleRef.current);
@@ -48,6 +129,7 @@ const Skills = () => {
                 style={{ backgroundColor: item.color }}
                 className={styles.skills_list_items}
               >
+                <span className={styles.icon}>{item.icon}</span>
                 {item.content}
               </li>
             );
@@ -57,4 +139,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;

@@ -19,15 +19,37 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      // 文字样式
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
       .skills_list_items {
-        opacity: 0;
         display: flex;
-        margin: 0 1.25rem;
-        width: calc(15% - 10px); /* 每个项占用 50% 的宽度，减去间距 */
-        margin-bottom: 10px; /* 每个项之间的间距 */
-        height: 9.375rem;
-        align-items: center;
+        flex-direction: column; // 改为纵向排列
+        align-items: center; // 水平居中
         justify-content: center;
+        width: 6.25rem;
+        margin: .625rem 1.25rem;
+        gap: .625rem; // 图标和文字之间的间距
+        padding: 1.25rem; // 增加内边距
+        border-radius: .625rem; // 圆角
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+          font-size: 2.5rem; // 放大图标
+          margin-bottom: 8px; // 图标下方间距
+          color: white; // 图标颜色
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1); // 悬浮时图标轻微放大
+          }
+        }
       }
     }
   }

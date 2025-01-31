@@ -111,19 +111,28 @@ function Home() {
             <div className={`${styles.arrow} ${styles.arrow3}`}></div>
           </div>
         </div>
-        <div ref={latestsRef} className={styles["latest-articles"]}>
-          <h2>Latest Articles</h2>
-          <ul>
-            <li>
-              <a href="/articles/react-hooks">Understanding React Hooks</a>
-            </li>
-            <li>
-              <a href="/articles/javascript-es6">JavaScript ES6 Features</a>
-            </li>
-            <li>
-              <a href="/articles/css-grid">CSS Grid Layout Tutorial</a>
-            </li>
-          </ul>
+        <div ref={latestsRef} className={styles["about-me"]}>
+          <h2>关于我</h2>
+          <div className={styles.content}>
+            <div className={styles["info-card"]}>
+              <div className={styles.icon}>🎯</div>
+              <h3>技术栈</h3>
+              <p>
+                专注于前端开发，熟悉 React、Vue、TypeScript
+                等技术栈，热爱学习新技术。
+              </p>
+            </div>
+            <div className={styles["info-card"]}>
+              <div className={styles.icon}>💡</div>
+              <h3>项目经验</h3>
+              <p>参与过多个大型项目开发，擅长组件化开发和性能优化。</p>
+            </div>
+            <div className={styles["info-card"]}>
+              <div className={styles.icon}>🎨</div>
+              <h3>兴趣爱好</h3>
+              <p>热爱编程、设计和创新，喜欢分享技术经验和解决方案。</p>
+            </div>
+          </div>
         </div>
         <Skills />
       </div>
