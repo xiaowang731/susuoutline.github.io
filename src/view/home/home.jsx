@@ -41,6 +41,7 @@ const svgPath = [
     stroke: "#000",
   },
 ];
+// 打字机
 const words = [
   "书山有路勤为径,学海无涯苦作舟!",
   "知己不足而后进,望山远岐而前行!",
@@ -125,20 +126,6 @@ function Home() {
           </ul>
         </div>
         <Skills />
-        <div className={styles.social}>
-          <h2>Connect with Me</h2>
-          <ul>
-            <li>
-              <a href="https://github.com/yourusername">GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/yourusername">Twitter</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </>
   );
